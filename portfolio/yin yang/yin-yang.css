@@ -1,0 +1,59 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* title */
+h1{
+    text-align: center;
+    margin: 50px auto;
+    font-size: 40px;
+}
+/* id */
+#yin-yang{
+    display: flex;
+    width: 280px;
+    height: 280px;
+    border-style: solid;
+    border-radius: 50%;
+    margin:auto ;
+    margin-top: 100px;
+    position: relative;
+    border-width: 10px 140px 10px 10px;
+    /* funtion animation*/
+    animation: rotation 10s infinite linear;
+}
+/* before */
+#yin-yang::before{
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 50px solid #000;
+    top: 0;
+    left: 50%;
+}
+/* after */
+#yin-yang::after{
+    position: absolute;
+    content: '';
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 50%;
+    border: 50px solid #fff;
+    top: 50%;
+    left: 50%;
+}
+/* animation rotation */
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
